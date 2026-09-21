@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritmos da Terra - Aulas de Dança</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho / Menu -->
+    <header>
+        <div class="logo">💃 Ritmos da Terra</div>
+        <nav>
+            <ul>
+                <li><a href="#estilos">Estilos</a></li>
+                <li><a href="#horarios">Horários & Ensaios</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Sinta a Energia das Danças Tradicionais</h1>
+            <p>Aprenda frevo, samba, maracatu e muito mais com os melhores professores.</p>
+            <a href="#horarios" class="btn">Ver Grade de Horários</a>
+        </div>
+    </section>
+
+    <!-- Seção de Estilos de Dança -->
+    <section id="estilos" class="container">
+        <h2 class="section-title">Nossos Estilos de Dança</h2>
+        <div class="grid-estilos">
+            <div class="card">
+                <h3>Frevo</h3>
+                <p>Passos rápidos, sombrinhas coloridas e muita energia do Carnaval pernambucano.</p>
+            </div>
+            <div class="card">
+                <h3>Samba</h3>
+                <p>O gingado e a alegria do ritmo que é o coração e a identidade do Brasil.</p>
+            </div>
+            <div class="card">
+                <h3>Maracatu</h3>
+                <p>A força dos tambores e o cortejo real em uma dança cheia de ancestralidade.</p>
+            </div>
+            <div class="card">
+                <h3>Caboclinho</h3>
+                <p>Ritmo rápido e rituais indígenas marcados pelo estalido das preacas.</p>
+            </div>
+            <div class="card">
+                <h3>Afoxé</h3>
+                <p>O cortejo do candomblé na rua, trazendo paz, axé e movimentos sagrados.</p>
+            </div>
+            <div class="card">
+                <h3>Carimbó</h3>
+                <p>A vibração do Norte do país com saias rodadas e ritmo contagiante.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Horários e Ensaios -->
+    <section id="horarios" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Horários de Aulas e Ensaios</h2>
+            
+            <!-- Filtros Interativos (JS) -->
+            <div class="filtros">
+                <button class="btn-filtro active" data-filter="todos">Mostrar Tudo</button>
+                <button class="btn-filtro" data-filter="aula">Aulas Regulares</button>
+                <button class="btn-filtro" data-filter="ensaio">Ensaios Oficiais</button>
+            </div>
+
+            <div class="tabela-responsiva">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Estilo</th>
+                            <th>Tipo</th>
+                            <th>Horário</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-corpo">
+                        <tr class="item-agenda" data-tipo="aula">
+                            <td>Segunda-feira</td>
+                            <td>Frevo</td>
+                            <td><span class="badge aula">Aula</span></td>
+                            <td>19:00 - 20:30</td>
+                        </tr>
+                        <tr class="item-agenda" data-tipo="ensaio">
+                            <td>Terça-feira</td>
+                            <td>Maracatu</td>
+                            <td><span class="badge ensaio">Ensaio</span></td>
+                            <td>20:00 - 22:00</td>
+                        </tr>
+                        <tr class="item-agenda" data-tipo="aula">
+                            <td>Quarta-feira</td>
+                            <td>Samba</td>
+                            <td><span class="badge aula">Aula</span></td>
+                            <td>18:30 - 20:00</td>
+                        </tr>
+                        <tr class="item-agenda" data-tipo="aula">
+                            <td>Quinta-feira</td>
+                            <td>Carimbó / Afoxé</td>
+                            <td><span class="badge aula">Aula</span></td>
+                            <td>19:00 - 20:30</td>
+                        </tr>
+                        <tr class="item-agenda" data-tipo="ensaio">
+                            <td>Sexta-feira</td>
+                            <td>Geral (Todos os Ritmos)</td>
+                            <td><span class="badge ensaio">Ensaio</span></td>
+                            <td>19:30 - 21:30</td>
+                        </tr>
+                        <tr class="item-agenda" data-tipo="aula">
+                            <td>Sábado</td>
+                            <td>Caboclinho</td>
+                            <td><span class="badge aula">Aula</span></td>
+                            <td>10:00 - 11:30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé / Contato -->
+    <footer id="contato">
+        <p>&copy; 2026 Ritmos da Terra. Todos os direitos reservados.</p>
+        <p>Telefone: <a href="tel:+5581999999999">(81) 99999-9999</a> | Email: contato@ritmosdaterra.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
