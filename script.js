@@ -1,27 +1,40 @@
-// Aguarda o carregamento do documento
-document.addEventListener('DOMContentLoaded', () => {
-    const botoesFiltro = document.querySelectorAll('.btn-filtro');
-    const linhasAgenda = document.querySelectorAll('.item-agenda');
 
-    // Sistema Dinâmico de Filtros para a Tabela
-    botoesFiltro.forEach(botao => {
-        botao.addEventListener('click', () => {
-            // Remove classe ativa de todos os botões
-            botoesFiltro.forEach(b => b.classList.remove('active'));
-            // Adiciona classe ativa ao botão clicado
-            botao.classList.add('active');
+     // MENU MOBILE RESPONSIVO
+const mobileMenu = document.getElementById('mobile-menu');
+const navMenu = document.querySelector('.nav-menu');
 
-            const categoriaFiltro = botao.getAttribute('data-filter');
+mobileMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    
+    // Animação simples do ícone do menu sanduíche
+    const bars = mobileMenu.querySelectorAll('.bar');
+    mobileMenu.classList.toggle('open');
+});
 
-            linhasAgenda.forEach(linha => {
-                const tipoLinha = linha.getAttribute('data-tipo');
-
-                if (categoriaFiltro === 'todos' || tipoLinha === categoriaFiltro) {
-                    linha.style.display = ''; // Mostra a linha (padrão)
-                } else {
-                    linha.style.display = 'none'; // Esconde a linha
-                }
-            });
-        });
+// FECHAR MENU AO CLICAR EM UM LINK
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
     });
 });
+
+// FORMULÁRIO DE AGENDAMENTO INTERATIVO
+const formAgendamento = document.getElementById('form-agendamento');
+const msgSucesso = document.getElementById('msg-sucesso');
+
+if (formAgendamento) {
+    formAgendamento.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Exibe mensagem de sucesso
+        msgSucesso.classList.remove('hidden');
+        
+        // Limpa o formulário após 2 segundos
+        setTimeout(() => {
+            formAgendamento.reset();
+            msgSucesso.classList.add('hidden');
+        }, 4000);
+    });
+}   
+    
+
