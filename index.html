@@ -1,136 +1,390 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritmos da Terra - Aulas de Dança</title>
+    <title>Corpo Brasil - Dança e Cultura Brasileira</title>
+    <!-- Ícone da Página -->
+    <link rel="icon" href="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=64&q=80">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Arquivo CSS Separado -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Cabeçalho / Menu -->
-    <header>
-        <div class="logo">💃 Ritmos da Terra</div>
-        <nav>
+    <!-- CABEÇALHO / MENU PRINCIPAL -->
+    <header class="header">
+        <div class="logo-container">
+            <i class="fa-solid fa-fire flame-icon"></i>
+            <span class="logo-text">CORPO <span>BRASIL</span></span>
+        </div>
+        <nav class="nav-menu">
             <ul>
-                <li><a href="#estilos">Estilos</a></li>
-                <li><a href="#horarios">Horários & Ensaios</a></li>
+                <li><a href="#inicio" class="active">Início</a></li>
+                <li><a href="#dancas">Danças</a></li>
+                <li><a href="#cultura">Cultura</a></li>
+                <li><a href="#horarios">Horários & Agendamentos</a></li>
+                <li><a href="#professores">Professores</a></li>
+                <li><a href="#planos">Planos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </header>
 
-    <!-- Banner Principal -->
-    <section class="hero">
+    <!-- SEÇÃO INÍCIO (TOPO COM VÍDEO DE FUNDO) -->
+    <section id="inicio" class="hero">
+        <!-- Vídeo de Fundo (Loop, Silenciado) -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-people-dancing-in-a-party-41584-large.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Sinta a Energia das Danças Tradicionais</h1>
-            <p>Aprenda frevo, samba, maracatu e muito mais com os melhores professores.</p>
-            <a href="#horarios" class="btn">Ver Grade de Horários</a>
-        </div>
-    </section>
-
-    <!-- Seção de Estilos de Dança -->
-    <section id="estilos" class="container">
-        <h2 class="section-title">Nossos Estilos de Dança</h2>
-        <div class="grid-estilos">
-            <div class="card">
-                <h3>Frevo</h3>
-                <p>Passos rápidos, sombrinhas coloridas e muita energia do Carnaval pernambucano.</p>
-            </div>
-            <div class="card">
-                <h3>Samba</h3>
-                <p>O gingado e a alegria do ritmo que é o coração e a identidade do Brasil.</p>
-            </div>
-            <div class="card">
-                <h3>Maracatu</h3>
-                <p>A força dos tambores e o cortejo real em uma dança cheia de ancestralidade.</p>
-            </div>
-            <div class="card">
-                <h3>Caboclinho</h3>
-                <p>Ritmo rápido e rituais indígenas marcados pelo estalido das preacas.</p>
-            </div>
-            <div class="card">
-                <h3>Afoxé</h3>
-                <p>O cortejo do candomblé na rua, trazendo paz, axé e movimentos sagrados.</p>
-            </div>
-            <div class="card">
-                <h3>Carimbó</h3>
-                <p>A vibração do Norte do país com saias rodadas e ritmo contagiante.</p>
+            <h1>Sinta o Ritmo do <span>Brasil</span></h1>
+            <p>Conecte seu corpo e sua alma com a energia contagiante das nossas danças tradicionais e culturais.</p>
+            <div class="hero-buttons">
+                <a href="#horarios" class="btn btn-primary">Agende sua Aula Experimental</a>
+                <a href="#dancas" class="btn btn-secondary">Explorar Danças</a>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Horários e Ensaios -->
-    <section id="horarios" class="bg-light">
-        <div class="container">
-            <h2 class="section-title">Horários de Aulas e Ensaios</h2>
-            
-            <!-- Filtros Interativos (JS) -->
-            <div class="filtros">
-                <button class="btn-filtro active" data-filter="todos">Mostrar Tudo</button>
-                <button class="btn-filtro" data-filter="aula">Aulas Regulares</button>
-                <button class="btn-filtro" data-filter="ensaio">Ensaios Oficiais</button>
+    <!-- SEÇÃO DANÇAS CULTURAIS -->
+    <section id="dancas" class="dancas-section">
+        <div class="section-title">
+            <h2>Nossas <span>Danças</span></h2>
+            <p>Descubra a diversidade dos ritmos que contam a história do nosso povo</p>
+        </div>
+
+        <div class="dancas-grid">
+            <!-- Caboclinho -->
+            <div class="danca-card">
+                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=600&q=80" alt="Caboclinho">
+                <div class="danca-info">
+                    <h3>Caboclinho</h3>
+                    <span class="tag">Pernambuco</span>
+                    <p>Dança dramática de forte influência indígena, marcada pela velocidade dos passos, saltos acrobáticos e o som característico das surubas e maracas.</p>
+                </div>
             </div>
 
-            <div class="tabela-responsiva">
+            <!-- Carimbó -->
+            <div class="danca-card">
+                <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=600&q=80" alt="Carimbó">
+                <div class="danca-info">
+                    <h3>Carimbó</h3>
+                    <span class="tag">Pará</span>
+                    <p>Típico da região norte, encanta com saias rodadas coloridas, giros intensos e o compasso marcante dos tambores artesanais curimbós.</p>
+                </div>
+            </div>
+
+            <!-- Xaxado -->
+            <div class="danca-card">
+                <img src="https://images.unsplash.com/photo-1545959570-a8649bad25d4?auto=format&fit=crop&w=600&q=80" alt="Xaxado">
+                <div class="danca-info">
+                    <h3>Xaxado</h3>
+                    <span class="tag">Sertão Nordestino</span>
+                    <p>Dança do cangaço caracterizada pelo arrastar das alpargatas no chão, ritmada pelo som da sanfona, zabumba e triângulo.</p>
+                </div>
+            </div>
+
+            <!-- Frevo -->
+            <div class="danca-card">
+                <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80" alt="Frevo">
+                <div class="danca-info">
+                    <h3>Frevo</h3>
+                    <span class="tag">Pernambuco</span>
+                    <p>Muita eletricidade, passos acrobáticos rápidos, som de metais vibrantes e a inconfundível sombrinha colorida.</p>
+                </div>
+            </div>
+
+            <!-- Maracatu -->
+            <div class="danca-card">
+                <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=600&q=80" alt="Maracatu">
+                <div class="danca-info">
+                    <h3>Maracatu</h3>
+                    <span class="tag">Pernambuco</span>
+                    <p>Ritual estético e religioso que mistura tradições afro-brasileiras, baques pesados de alfaias e majestosos estandartes.</p>
+                </div>
+            </div>
+
+            <!-- Afoxé -->
+            <div class="danca-card">
+                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80" alt="Afoxé">
+                <div class="danca-info">
+                    <h3>Afoxé</h3>
+                    <span class="tag">Bahia</span>
+                    <p>Conhecido como o "candomble de rua", carrega a força dos terreiros, toques de agogô e movimentos corporais de louvação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO TIPO DE CULTURA -->
+    <section id="cultura" class="cultura-section">
+        <div class="cultura-container">
+            <div class="cultura-text">
+                <h2>Nossa <span>Cultura</span>, Nossa Identidade</h2>
+                <p>O <strong>Corpo Brasil</strong> não é apenas uma escola de dança, é um centro de preservação e vivência das raízes brasileiras. Acreditamos que cada passo de dança carrega a alma dos nossos ancestrais, misturando influências indígenas, africanas e europeias em uma explosão única de alegria e resistência.</p>
+                <div class="cultura-badges">
+                    <span><i class="fa-solid fa-heart"></i> Resgate Histórico</span>
+                    <span><i class="fa-solid fa-users"></i> Inclusão & Diversidade</span>
+                    <span><i class="fa-solid fa-seedling"></i> Expressão Viva</span>
+                </div>
+            </div>
+            <div class="cultura-img">
+                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" alt="Cultura Brasileira">
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO HORÁRIOS E AGENDAMENTOS -->
+    <section id="horarios" class="horarios-section">
+        <div class="section-title">
+            <h2>Horários & <span>Agendamentos</span></h2>
+            <p>Confira nossa grade de aulas e garanta sua vaga na turma de sua preferência</p>
+        </div>
+
+        <div class="horarios-grid">
+            <!-- Tabela de Horários -->
+            <div class="tabela-horarios">
+                <h3><i class="fa-solid fa-calendar-days"></i> Grade Semanal</h3>
                 <table>
                     <thead>
                         <tr>
                             <th>Dia</th>
-                            <th>Estilo</th>
-                            <th>Tipo</th>
                             <th>Horário</th>
+                            <th>Ritmo</th>
+                            <th>Professor(a)</th>
                         </tr>
                     </thead>
-                    <tbody id="tabela-corpo">
-                        <tr class="item-agenda" data-tipo="aula">
-                            <td>Segunda-feira</td>
-                            <td>Frevo</td>
-                            <td><span class="badge aula">Aula</span></td>
+                    <tbody>
+                        <tr>
+                            <td>Segunda</td>
                             <td>19:00 - 20:30</td>
+                            <td>Frevo & Passo</td>
+                            <td>Luiza Matos</td>
                         </tr>
-                        <tr class="item-agenda" data-tipo="ensaio">
-                            <td>Terça-feira</td>
-                            <td>Maracatu</td>
-                            <td><span class="badge ensaio">Ensaio</span></td>
-                            <td>20:00 - 22:00</td>
-                        </tr>
-                        <tr class="item-agenda" data-tipo="aula">
-                            <td>Quarta-feira</td>
-                            <td>Samba</td>
-                            <td><span class="badge aula">Aula</span></td>
+                        <tr>
+                            <td>Terça</td>
                             <td>18:30 - 20:00</td>
+                            <td>Carimbó</td>
+                            <td>Carlos Silva</td>
                         </tr>
-                        <tr class="item-agenda" data-tipo="aula">
-                            <td>Quinta-feira</td>
-                            <td>Carimbó / Afoxé</td>
-                            <td><span class="badge aula">Aula</span></td>
+                        <tr>
+                            <td>Quarta</td>
                             <td>19:00 - 20:30</td>
+                            <td>Maracatu de Baque Virado</td>
+                            <td>Jandira Santos</td>
                         </tr>
-                        <tr class="item-agenda" data-tipo="ensaio">
-                            <td>Sexta-feira</td>
-                            <td>Geral (Todos os Ritmos)</td>
-                            <td><span class="badge ensaio">Ensaio</span></td>
-                            <td>19:30 - 21:30</td>
+                        <tr>
+                            <td>Quinta</td>
+                            <td>19:30 - 21:00</td>
+                            <td>Xaxado & Forró Raiz</td>
+                            <td>Rafael Souza</td>
                         </tr>
-                        <tr class="item-agenda" data-tipo="aula">
+                        <tr>
+                            <td>Sexta</td>
+                            <td>18:00 - 19:30</td>
+                            <td>Afoxé</td>
+                            <td>Jandira Santos</td>
+                        </tr>
+                        <tr>
                             <td>Sábado</td>
-                            <td>Caboclinho</td>
-                            <td><span class="badge aula">Aula</span></td>
                             <td>10:00 - 11:30</td>
+                            <td>Caboclinho</td>
+                            <td>Carlos Silva</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+
+            <!-- Formulário de Agendamento -->
+            <div class="agendamento-form-box">
+                <h3><i class="fa-solid fa-ticket"></i> Agende sua Aula</h3>
+                <form id="form-agendamento">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" required placeholder="Seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" required placeholder="seu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">WhatsApp / Telefone</label>
+                        <input type="tel" id="telefone" required placeholder="(99) 99999-9999">
+                    </div>
+                    <div class="form-group">
+                        <label for="ritmo-escolhido">Escolha a Dança</label>
+                        <select id="ritmo-escolhido" required>
+                            <option value="">Selecione...</option>
+                            <option value="Caboclinho">Caboclinho</option>
+                            <option value="Carimbó">Carimbó</option>
+                            <option value="Xaxado">Xaxado</option>
+                            <option value="Frevo">Frevo</option>
+                            <option value="Maracatu">Maracatu</option>
+                            <option value="Afoxé">Afoxé</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Confirmar Agendamento</button>
+                    <p id="msg-sucesso" class="sucesso-msg hidden">Agendamento realizado com sucesso! Entraremos em contato via WhatsApp.</p>
+                </form>
+            </div>
         </div>
     </section>
 
-    <!-- Rodapé / Contato -->
-    <footer id="contato">
-        <p>&copy; 2026 Ritmos da Terra. Todos os direitos reservados.</p>
-        <p>Telefone: <a href="tel:+5581999999999">(81) 99999-9999</a> | Email: contato@ritmosdaterra.com</p>
+    <!-- SEÇÃO PROFESSORES -->
+    <section id="professores" class="professores-section">
+        <div class="section-title">
+            <h2>Nossos <span>Professores</span></h2>
+            <p>Profissionais apaixonados dedicados a ensinar a verdadeira essência da nossa arte</p>
+        </div>
+
+        <div class="professores-grid">
+            <!-- Professor 1 -->
+            <div class="professor-card">
+                <div class="prof-img">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Luiza Matos">
+                </div>
+                <div class="prof-info">
+                    <h3>Luiza Matos</h3>
+                    <span class="prof-cargo">Especialista em Frevo e Danças Carnavalescas</span>
+                    <p>Bailarina profissional com mais de 12 anos de palco, campeã de passistas de frevo em Pernambuco.</p>
+                </div>
+            </div>
+
+            <!-- Professor 2 -->
+            <div class="professor-card">
+                <div class="prof-img">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Carlos Silva">
+                </div>
+                <div class="prof-info">
+                    <h3>Carlos Silva</h3>
+                    <span class="prof-cargo">Mestre em Carimbó & Caboclinho</span>
+                    <p>Pesquisador da cultura nortenha e nordestina, disseminando ritmos tradicionais por todo o Brasil.</p>
+                </div>
+            </div>
+
+            <!-- Professor 3 -->
+            <div class="professor-card">
+                <div class="prof-img">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Jandira Santos">
+                </div>
+                <div class="prof-info">
+                    <h3>Jandira Santos</h3>
+                    <span class="prof-cargo">Especialista em Maracatu e Afoxé</span>
+                    <p>Percussionista e coreógrafa, com vivência profunda nos terreiros e manifestações de matriz africana.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO PLANOS -->
+    <section id="planos" class="planos-section">
+        <div class="section-title">
+            <h2>Nossos <span>Planos</span></h2>
+            <p>Escolha a melhor opção para mergulhar de cabeça na dança brasileira</p>
+        </div>
+
+        <div class="planos-grid">
+            <div class="plano-card">
+                <h3>Aula Avulsa</h3>
+                <div class="preco">R$ 45<span>/aula</span></div>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Escolha qualquer ritmo</li>
+                    <li><i class="fa-solid fa-check"></i> Acompanhamento profissional</li>
+                    <li><i class="fa-solid fa-check"></i> Sem fidelidade</li>
+                </ul>
+                <a href="#horarios" class="btn btn-secondary">Comprar Aula</a>
+            </div>
+
+            <div class="plano-card popular">
+                <div class="badge-popular">Mais Popular</div>
+                <h3>Plano Mensal</h3>
+                <div class="preco">R$ 160<span>/mês</span></div>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Acesso ilimitado às turmas</li>
+                    <li><i class="fa-solid fa-check"></i> Participação em workshops</li>
+                    <li><i class="fa-solid fa-check"></i> Acompanhamento personalizado</li>
+                </ul>
+                <a href="#horarios" class="btn btn-primary">Assinar Agora</a>
+            </div>
+
+            <div class="plano-card">
+                <h3>Plano Cultural</h3>
+                <div class="preco">R$ 280<span>/casal ou dupla</span></div>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Desconto especial para duplas</li>
+                    <li><i class="fa-solid fa-check"></i> Acesso livre a todas as danças</li>
+                    <li><i class="fa-solid fa-check"></i> Convites para eventos e festas</li>
+                </ul>
+                <a href="#horarios" class="btn btn-secondary">Assinar em Dupla</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO CONTATO -->
+    <section id="contato" class="contato-section">
+        <div class="section-title">
+            <h2>Fale <span>Conosco</span></h2>
+            <p>Tire suas dúvidas ou venha nos fazer uma visita</p>
+        </div>
+
+        <div class="contato-container">
+            <div class="contato-info">
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Endereço</h4>
+                        <p>Av. Brasil, 1500 - Centro, Rio de Janeiro - RJ</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Telefone / WhatsApp</h4>
+                        <p>(21) 98888-7777</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>E-mail</h4>
+                        <p>contato@corpobrasil.com.br</p>
+                    </div>
+                </div>
+                <div class="redes-sociais">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <form class="contato-form">
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu E-mail" required>
+                <textarea rows="5" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 CORPO BRASIL. Todos os direitos reservados. Feito com ❤️ e muita energia brasileira.</p>
     </footer>
 
+    <!-- Arquivo JS Separado -->
     <script src="script.js"></script>
 </body>
 </html>
