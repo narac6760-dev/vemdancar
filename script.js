@@ -23,11 +23,13 @@ if (formAgendamento) {
     formAgendamento.addEventListener('submit', (e) => {
         e.preventDefault();
         
+        // Exibe mensagem de confirmação
         msgSucesso.classList.remove('hidden');
         
+        // Limpa o formulário após 4 segundos
         setTimeout(() => {
             formAgendamento.reset();
             msgSucesso.classList.add('hidden');
         }, 4000);
     });
-}     
+}
