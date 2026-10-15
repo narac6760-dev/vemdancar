@@ -1,383 +1,299 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corpo Brasil - Dança e Cultura Brasileira</title>
-    <!-- Ícone da Página -->
-    <link rel="icon" href="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=64&q=80">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome para Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Arquivo CSS Separado -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça as danças culturais brasileiras, suas histórias, tradições e ritmos.">
+  <title>Corpo Brasil | Dança e Cultura</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
+  <header class="header">
+    <a href="#inicio" class="logo">
+      CORPO<span>BRASIL</span>
+    </a>
 
-    <!-- CABEÇALHO / MENU PRINCIPAL -->
-    <header class="header">
-        <div class="logo-container">
-            <i class="fa-solid fa-fire flame-icon"></i>
-            <span class="logo-text">CORPO <span>BRASIL</span></span>
-        </div>
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="#inicio" class="active">Início</a></li>
-                <li><a href="#dancas">Danças</a></li>
-                <li><a href="#cultura">Cultura</a></li>
-                <li><a href="#horarios">Horários & Agendamentos</a></li>
-                <li><a href="#professores">Professores</a></li>
-                <li><a href="#planos">Planos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </header>
+    <button class="menu-toggle" aria-label="Abrir menu"
+      aria-expanded="false" aria-controls="menu">
+      ☰
+    </button>
 
-    <!-- SEÇÃO INÍCIO (TOPO COM VÍDEO DE FUNDO) -->
-    <section id="inicio" class="hero">
-        <video autoplay muted loop playsinline class="hero-video">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-people-dancing-in-a-party-41584-large.mp4" type="video/mp4">
-            Seu navegador não suporta vídeos.
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Sinta o Ritmo do <span>Brasil</span></h1>
-            <p>Conecte seu corpo e sua alma com a energia contagiante das nossas danças tradicionais e culturais.</p>
-            <div class="hero-buttons">
-                <a href="#horarios" class="btn btn-primary">Agende sua Aula Experimental</a>
-                <a href="#dancas" class="btn btn-secondary">Explorar Danças</a>
-            </div>
+    <nav class="nav" id="menu">
+      <a href="#inicio">Início</a>
+      <a href="#dancas">Danças</a>
+      <a href="#cultura">Cultura</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <span class="eyebrow">RAÍZES • RITMOS • TRADIÇÃO</span>
+
+        <h1>O Brasil dança<br>em cada <span>cultura.</span></h1>
+
+        <p>
+          Descubra a beleza das danças tradicionais brasileiras
+          e conheça as histórias que movimentam o nosso povo.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#dancas" class="btn btn-primary">
+            Explorar danças
+          </a>
+          <a href="#cultura" class="btn btn-outline">
+            Nossa cultura
+          </a>
         </div>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1200&q=85"
+          alt="Festa popular com luzes e celebração cultural"
+          fetchpriority="high">
+        <div class="image-label">
+          <span>Uma cultura viva</span>
+          <strong>Muitos ritmos, um só Brasil.</strong>
+        </div>
+      </div>
     </section>
 
-    <!-- SEÇÃO DANÇAS CULTURAIS -->
-    <section id="dancas" class="dancas-section">
-        <div class="section-title">
-            <h2>Nossas <span>Danças</span></h2>
-            <p>Descubra a diversidade dos ritmos que contam a história do nosso povo</p>
-        </div>
+    <section class="dances section" id="dancas">
+      <div class="section-heading">
+        <span class="eyebrow">EXPLORE NOSSA HISTÓRIA</span>
+        <h2>Danças que contam<br>quem <span>somos.</span></h2>
+        <p>
+          Cada movimento carrega memórias, identidades e tradições
+          que atravessam gerações.
+        </p>
+      </div>
 
-        <div class="dancas-grid">
-            <!-- Caboclinho -->
-            <div class="danca-card">
-                <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=600&q=80" alt="Caboclinho">
-                <div class="danca-info">
-                    <h3>Caboclinho</h3>
-                    <span class="tag">Pernambuco</span>
-                    <p>Dança dramática de forte influência indígena, marcada pela velocidade dos passos, saltos acrobáticos e o som característico das surubas e maracas.</p>
-                </div>
-            </div>
+      <div class="dance-grid">
+        <article class="dance-card">
+          <div class="dance-image">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Frevo.jpg"
+              alt="Frevo, dança tradicional de Pernambuco"
+              loading="lazy">
+            <span class="dance-number">01</span>
+          </div>
+          <div class="dance-info">
+            <span class="location">PERNAMBUCO</span>
+            <h3>Frevo</h3>
+            <p>
+              Energia, acrobacias e sombrinhas coloridas marcam
+              essa expressão vibrante do carnaval pernambucano.
+            </p>
+            <a class="dance-link"
+              href="https://www.google.com/search?q=frevo+dan%C3%A7a+cultural+brasileira"
+              target="_blank" rel="noopener noreferrer">
+              Conhecer a dança ↗
+            </a>
+          </div>
+        </article>
 
-            <!-- Carimbó -->
-            <div class="danca-card">
-                <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=600&q=80" alt="Carimbó">
-                <div class="danca-info">
-                    <h3>Carimbó</h3>
-                    <span class="tag">Pará</span>
-                    <p>Típico da região norte, encanta com saias rodadas coloridas, giros intensos e o compasso marcante dos tambores artesanais curimbós.</p>
-                </div>
-            </div>
+        <article class="dance-card">
+          <div class="dance-image">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Carimbo%2003.jpg"
+              alt="Carimbó com suas saias rodadas e coloridas"
+              loading="lazy">
+            <span class="dance-number">02</span>
+          </div>
+          <div class="dance-info">
+            <span class="location">PARÁ</span>
+            <h3>Carimbó</h3>
+            <p>
+              Giros, saias rodadas e tambores dão vida a uma
+              tradição marcante da cultura paraense.
+            </p>
+            <a class="dance-link"
+              href="https://www.google.com/search?q=carimb%C3%B3+dan%C3%A7a+tradicional+Par%C3%A1"
+              target="_blank" rel="noopener noreferrer">
+              Conhecer a dança ↗
+            </a>
+          </div>
+        </article>
 
-            <!-- Xaxado -->
-            <div class="danca-card">
-                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80" alt="Xaxado">
-                <div class="danca-info">
-                    <h3>Xaxado</h3>
-                    <span class="tag">Sertão Nordestino</span>
-                    <p>Dança do cangaço caracterizada pelo arrastar das alpargatas no chão, ritmada pelo som da sanfona, zabumba e triângulo.</p>
-                </div>
-            </div>
+        <article class="dance-card">
+          <div class="dance-image">
+            <img
+              src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=900&q=80"
+              alt="Festa musical que representa a energia do sertão"
+              loading="lazy">
+            <span class="dance-number">03</span>
+          </div>
+          <div class="dance-info">
+            <span class="location">SERTÃO NORDESTINO</span>
+            <h3>Xaxado</h3>
+            <p>
+              Com raízes na história do cangaço, seus passos
+              marcados expressam a força e a memória sertaneja.
+            </p>
+            <a class="dance-link"
+              href="https://www.google.com/search?q=xaxado+dan%C3%A7a+tradicional+sert%C3%A3o"
+              target="_blank" rel="noopener noreferrer">
+              Conhecer a dança ↗
+            </a>
+          </div>
+        </article>
 
-            <!-- Frevo -->
-            <div class="danca-card">
-                <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=600&q=80" alt="Frevo">
-                <div class="danca-info">
-                    <h3>Frevo</h3>
-                    <span class="tag">Pernambuco</span>
-                    <p>Muita eletricidade, passos acrobáticos rápidos, som de metais vibrantes e a inconfundível sombrinha colorida.</p>
-                </div>
-            </div>
+        <article class="dance-card">
+          <div class="dance-image">
+            <img
+              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80"
+              alt="Celebração popular com cores e alegria"
+              loading="lazy">
+            <span class="dance-number">04</span>
+          </div>
+          <div class="dance-info">
+            <span class="location">PERNAMBUCO</span>
+            <h3>Caboclinho</h3>
+            <p>
+              Uma manifestação popular de influência indígena,
+              com coreografias ágeis, música e adereços tradicionais.
+            </p>
+            <a class="dance-link"
+              href="https://www.google.com/search?q=caboclinho+dan%C3%A7a+Pernambuco+tradi%C3%A7%C3%A3o"
+              target="_blank" rel="noopener noreferrer">
+              Conhecer a dança ↗
+            </a>
+          </div>
+        </article>
 
-            <!-- Maracatu -->
-            <div class="danca-card">
-                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=600&q=80" alt="Maracatu">
-                <div class="danca-info">
-                    <h3>Maracatu</h3>
-                    <span class="tag">Pernambuco</span>
-                    <p>Ritual estético e religioso que mistura tradições afro-brasileiras, baques pesados de alfaias e majestosos estandartes.</p>
-                </div>
-            </div>
+        <article class="dance-card">
+          <div class="dance-image">
+            <img
+              src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=80"
+              alt="Celebração coletiva que remete aos cortejos populares"
+              loading="lazy">
+            <span class="dance-number">05</span>
+          </div>
+          <div class="dance-info">
+            <span class="location">PERNAMBUCO</span>
+            <h3>Maracatu</h3>
+            <p>
+              Cortejos, alfaias e vestimentas imponentes celebram
+              a riqueza das tradições afro-brasileiras.
+            </p>
+            <a class="dance-link"
+              href="https://www.google.com/search?q=maracatu+na%C3%A7%C3%A3o+cultura+pernambucana"
+              target="_blank" rel="noopener noreferrer">
+              Conhecer a dança ↗
+            </a>
+          </div>
+        </article>
 
-            <!-- Afoxé -->
-            <div class="danca-card">
-                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80" alt="Afoxé">
-                <div class="danca-info">
-                    <h3>Afoxé</h3>
-                    <span class="tag">Bahia</span>
-                    <p>Conhecido como o "candomble de rua", carrega a força dos terreiros, toques de agogô e movimentos corporais de louvação.</p>
-                </div>
-            </div>
-        </div>
+        <article class="dance-card">
+          <div class="dance-image">
+            <img
+              src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=900&q=80"
+              alt="Música e celebração coletiva"
+              loading="lazy">
+            <span class="dance-number">06</span>
+          </div>
+          <div class="dance-info">
+            <span class="location">BAHIA</span>
+            <h3>Afoxé</h3>
+            <p>
+              Ritmos, cantos e cortejos ligados às tradições
+              afro-brasileiras ocupam as ruas com identidade e força.
+            </p>
+            <a class="dance-link"
+              href="https://www.google.com/search?q=afox%C3%A9+cultura+afro-brasileira+dan%C3%A7a"
+              target="_blank" rel="noopener noreferrer">
+              Conhecer a dança ↗
+            </a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- SEÇÃO TIPO DE CULTURA -->
-    <section id="cultura" class="cultura-section">
-        <div class="cultura-container">
-            <div class="cultura-text">
-                <h2>Nossa <span>Cultura</span>, Nossa Identidade</h2>
-                <p>O <strong>Corpo Brasil</strong> não é apenas uma escola de dança, é um centro de preservação e vivência das raízes brasileiras. Acreditamos que cada passo de dança carrega a alma dos nossos ancestrais, misturando influências indígenas, africanas e europeias em uma explosão única de alegria e resistência.</p>
-                <div class="cultura-badges">
-                    <span><i class="fa-solid fa-heart"></i> Resgate Histórico</span>
-                    <span><i class="fa-solid fa-users"></i> Inclusão & Diversidade</span>
-                    <span><i class="fa-solid fa-seedling"></i> Expressão Viva</span>
-                </div>
-            </div>
-            <div class="cultura-img">
-                <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80" alt="Cultura Brasileira">
-            </div>
+    <section class="culture" id="cultura">
+      <div class="culture-image">
+        <img
+          src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1100&q=85"
+          alt="Pessoas reunidas em uma celebração cultural"
+          loading="lazy">
+      </div>
+
+      <div class="culture-content">
+        <span class="eyebrow">NOSSA IDENTIDADE</span>
+        <h2>A cultura vive em cada passo.</h2>
+        <p>
+          As danças brasileiras preservam histórias, saberes e
+          tradições de diferentes povos. Conhecê-las é valorizar
+          a diversidade que forma a nossa identidade.
+        </p>
+
+        <div class="culture-points">
+          <div>
+            <span>01</span>
+            <p><strong>Memória</strong><br>Histórias que passam entre gerações.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <p><strong>Diversidade</strong><br>Heranças indígenas, africanas e europeias.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <p><strong>Pertencimento</strong><br>Tradições que fortalecem comunidades.</p>
+          </div>
         </div>
+
+        <a href="#contato" class="btn btn-primary">
+          Faça parte dessa história
+        </a>
+      </div>
     </section>
 
-    <!-- SEÇÃO HORÁRIOS E AGENDAMENTOS -->
-    <section id="horarios" class="horarios-section">
-        <div class="section-title">
-            <h2>Horários & <span>Agendamentos</span></h2>
-            <p>Confira nossa grade de aulas e garanta sua vaga na turma de sua preferência</p>
-        </div>
+    <section class="contact section" id="contato">
+      <div class="section-heading">
+        <span class="eyebrow">VAMOS CONVERSAR?</span>
+        <h2>Entre no ritmo <span>com a gente.</span></h2>
+        <p>
+          Envie sua mensagem para saber mais sobre as danças
+          e as atividades culturais.
+        </p>
+      </div>
 
-        <div class="horarios-grid">
-            <div class="tabela-horarios">
-                <h3><i class="fa-solid fa-calendar-days"></i> Grade Semanal</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Dia</th>
-                            <th>Horário</th>
-                            <th>Ritmo</th>
-                            <th>Professor(a)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Segunda</td>
-                            <td>19:00 - 20:30</td>
-                            <td>Frevo & Passo</td>
-                            <td>Luiza Matos</td>
-                        </tr>
-                        <tr>
-                            <td>Terça</td>
-                            <td>18:30 - 20:00</td>
-                            <td>Carimbó</td>
-                            <td>Carlos Silva</td>
-                        </tr>
-                        <tr>
-                            <td>Quarta</td>
-                            <td>19:00 - 20:30</td>
-                            <td>Maracatu de Baque Virado</td>
-                            <td>Jandira Santos</td>
-                        </tr>
-                        <tr>
-                            <td>Quinta</td>
-                            <td>19:30 - 21:00</td>
-                            <td>Xaxado & Forró Raiz</td>
-                            <td>Rafael Souza</td>
-                        </tr>
-                        <tr>
-                            <td>Sexta</td>
-                            <td>18:00 - 19:30</td>
-                            <td>Afoxé</td>
-                            <td>Jandira Santos</td>
-                        </tr>
-                        <tr>
-                            <td>Sábado</td>
-                            <td>10:00 - 11:30</td>
-                            <td>Caboclinho</td>
-                            <td>Carlos Silva</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+      <form id="contact-form" class="contact-form">
+        <label for="name">Seu nome</label>
+        <input id="name" name="name" type="text"
+          placeholder="Digite seu nome" required>
 
-            <div class="agendamento-form-box">
-                <h3><i class="fa-solid fa-ticket"></i> Agende sua Aula</h3>
-                <form id="form-agendamento">
-                    <div class="form-group">
-                        <label for="nome">Nome Completo</label>
-                        <input type="text" id="nome" required placeholder="Seu nome">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" required placeholder="seu@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="telefone">WhatsApp / Telefone</label>
-                        <input type="tel" id="telefone" required placeholder="(99) 99999-9999">
-                    </div>
-                    <div class="form-group">
-                        <label for="ritmo-escolhido">Escolha a Dança</label>
-                        <select id="ritmo-escolhido" required>
-                            <option value="">Selecione...</option>
-                            <option value="Caboclinho">Caboclinho</option>
-                            <option value="Carimbó">Carimbó</option>
-                            <option value="Xaxado">Xaxado</option>
-                            <option value="Frevo">Frevo</option>
-                            <option value="Maracatu">Maracatu</option>
-                            <option value="Afoxé">Afoxé</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Confirmar Agendamento</button>
-                    <p id="msg-sucesso" class="sucesso-msg hidden">Agendamento realizado com sucesso! Entraremos em contato via WhatsApp.</p>
-                </form>
-            </div>
-        </div>
+        <label for="email">Seu e-mail</label>
+        <input id="email" name="email" type="email"
+          placeholder="voce@email.com" required>
+
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="4"
+          placeholder="Como podemos ajudar?" required></textarea>
+
+        <button class="btn btn-primary" type="submit">
+          Enviar mensagem
+        </button>
+
+        <p id="form-feedback" class="form-feedback"
+          role="status" aria-live="polite"></p>
+      </form>
     </section>
+  </main>
 
-    <!-- SEÇÃO PROFESSORES -->
-    <section id="professores" class="professores-section">
-        <div class="section-title">
-            <h2>Nossos <span>Professores</span></h2>
-            <p>Profissionais apaixonados dedicados a ensinar a verdadeira essência da nossa arte</p>
-        </div>
-
-        <div class="professores-grid">
-            <div class="professor-card">
-                <div class="prof-img">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Luiza Matos">
-                </div>
-                <div class="prof-info">
-                    <h3>Luiza Matos</h3>
-                    <span class="prof-cargo">Especialista em Frevo e Danças Carnavalescas</span>
-                    <p>Bailarina profissional com mais de 12 anos de palco, campeã de passistas de frevo em Pernambuco.</p>
-                </div>
-            </div>
-
-            <div class="professor-card">
-                <div class="prof-img">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Carlos Silva">
-                </div>
-                <div class="prof-info">
-                    <h3>Carlos Silva</h3>
-                    <span class="prof-cargo">Mestre em Carimbó & Caboclinho</span>
-                    <p>Pesquisador da cultura nortenha e nordestina, disseminando ritmos tradicionais por todo o Brasil.</p>
-                </div>
-            </div>
-
-            <div class="professor-card">
-                <div class="prof-img">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Jandira Santos">
-                </div>
-                <div class="prof-info">
-                    <h3>Jandira Santos</h3>
-                    <span class="prof-cargo">Especialista em Maracatu e Afoxé</span>
-                    <p>Percussionista e coreógrafa, com vivência profunda nos terreiros e manifestações de matriz africana.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO PLANOS -->
-    <section id="planos" class="planos-section">
-        <div class="section-title">
-            <h2>Nossos <span>Planos</span></h2>
-            <p>Escolha a melhor opção para mergulhar de cabeça na dança brasileira</p>
-        </div>
-
-        <div class="planos-grid">
-            <div class="plano-card">
-                <h3>Aula Avulsa</h3>
-                <div class="preco">R$ 45<span>/aula</span></div>
-                <ul>
-                    <li><i class="fa-solid fa-check"></i> Escolha qualquer ritmo</li>
-                    <li><i class="fa-solid fa-check"></i> Acompanhamento profissional</li>
-                    <li><i class="fa-solid fa-check"></i> Sem fidelidade</li>
-                </ul>
-                <a href="#horarios" class="btn btn-secondary">Comprar Aula</a>
-            </div>
-
-            <div class="plano-card popular">
-                <div class="badge-popular">Mais Popular</div>
-                <h3>Plano Mensal</h3>
-                <div class="preco">R$ 160<span>/mês</span></div>
-                <ul>
-                    <li><i class="fa-solid fa-check"></i> Acesso ilimitado às turmas</li>
-                    <li><i class="fa-solid fa-check"></i> Participação em workshops</li>
-                    <li><i class="fa-solid fa-check"></i> Acompanhamento personalizado</li>
-                </ul>
-                <a href="#horarios" class="btn btn-primary">Assinar Agora</a>
-            </div>
-
-            <div class="plano-card">
-                <h3>Plano Cultural</h3>
-                <div class="preco">R$ 280<span>/casal ou dupla</span></div>
-                <ul>
-                    <li><i class="fa-solid fa-check"></i> Desconto especial para duplas</li>
-                    <li><i class="fa-solid fa-check"></i> Acesso livre a todas as danças</li>
-                    <li><i class="fa-solid fa-check"></i> Convites para eventos e festas</li>
-                </ul>
-                <a href="#horarios" class="btn btn-secondary">Assinar em Dupla</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO CONTATO -->
-    <section id="contato" class="contato-section">
-        <div class="section-title">
-            <h2>Fale <span>Conosco</span></h2>
-            <p>Tire suas dúvidas ou venha nos fazer uma visita</p>
-        </div>
-
-        <div class="contato-container">
-            <div class="contato-info">
-                <div class="info-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                        <h4>Endereço</h4>
-                        <p>Av. Brasil, 1500 - Centro, Rio de Janeiro - RJ</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-phone"></i>
-                    <div>
-                        <h4>Telefone / WhatsApp</h4>
-                        <p>(21) 98888-7777</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <div>
-                        <h4>E-mail</h4>
-                        <p>contato@corpobrasil.com.br</p>
-                    </div>
-                </div>
-                <div class="redes-sociais">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                </div>
-            </div>
-
-            <form class="contato-form">
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="email" placeholder="Seu E-mail" required>
-                <textarea rows="5" placeholder="Sua Mensagem" required></textarea>
-                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- RODAPÉ -->
-    <footer>
-        <p>&copy; 2026 CORPO BRASIL. Todos os direitos reservados. Feito com ❤️ e muita energia brasileira.</p>
-    </footer>
-
-    <!-- Arquivo JS Separado -->
-    <script src="script.js"></script>
+  <footer class="footer">
+    <a href="#inicio" class="logo">CORPO<span>BRASIL</span></a>
+    <p>Celebrando a diversidade das danças brasileiras.</p>
+    <p>© <span id="year"></span> Corpo Brasil.</p>
+  </footer>
 </body>
 </html>
