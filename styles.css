@@ -1,0 +1,326 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-terra: #FAF5EF; /* Fundo off-white caloroso */
+    --bg-alt: #F3EAE0;   /* Tom de areia um pouco mais escuro */
+    --terracota: #B23B1E; /* Vermelho terracota vibrante */
+    --ocre: #D48C28;      /* Amarelo ouro/ocre */
+    --verde-profundo: #1E4620; /* Verde mata fechada */
+    --texto-escuro: #2C1E15; /* Marrom quase preto para leitura */
+    --branco: #FFFFFF;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-terra);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--verde-profundo);
+    color: var(--bg-terra);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--ocre);
+}
+
+header nav a {
+    color: var(--bg-terra);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: var(--ocre);
+}
+
+header nav .btn-nav {
+    background-color: var(--terracota);
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+}
+
+header nav .btn-nav:hover {
+    background-color: var(--ocre);
+    color: var(--texto-escuro);
+}
+
+/* Hero Banner */
+.hero {
+    background: linear-gradient(rgba(44, 30, 21, 0.6), rgba(30, 70, 32, 0.8)), 
+                url('https://unsplash.com') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--branco);
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    max-width: 800px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--bg-terra);
+}
+
+.btn-primary {
+    background-color: var(--ocre);
+    color: var(--texto-escuro);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--terracota);
+    color: var(--branco);
+    transform: translateY(-2px);
+}
+
+/* Seções Gerais */
+.section-container {
+    padding: 5rem 10%;
+}
+
+.bg-alt {
+    background-color: var(--bg-alt);
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--verde-profundo);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--terracota);
+    margin: 0.5rem auto 0 auto;
+}
+
+/* Grid de Ritmos */
+.grid-ritmos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card-ritmo {
+    background-color: var(--branco);
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--terracota);
+    transition: transform 0.3s;
+}
+
+.card-ritmo:hover {
+    transform: translateY(-5px);
+}
+
+.card-ritmo h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--texto-escuro);
+}
+
+.ritmo-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 20px;
+    color: var(--branco);
+}
+
+.badge-laranja { background-color: var(--terracota); }
+.badge-ocre { background-color: var(--ocre); }
+.badge-verde { background-color: var(--verde-profundo); }
+
+/* Professores e Horários */
+.grid-professores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.card-aula {
+    background-color: var(--branco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar-prof {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.aula-info {
+    padding: 1.5rem;
+}
+
+.aula-info h4 {
+    font-size: 1.3rem;
+    color: var(--verde-profundo);
+}
+
+.especialidade {
+    color: var(--terracota);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.agenda span {
+    display: block;
+    font-size: 0.9rem;
+    background-color: var(--bg-terra);
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid var(--ocre);
+    border-radius: 0 4px 4px 0;
+}
+
+/* Formulário de Matrícula */
+.form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--bg-alt);
+    padding: 3rem;
+    border-radius: 8px;
+    border: 2px solid var(--ocre);
+}
+
+.form-subtitle {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    font-family: inherit;
+    background-color: var(--branco);
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--verde-profundo);
+    box-shadow: 0 0 5px rgba(30, 70, 32, 0.3);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--verde-profundo);
+    color: var(--branco);
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--terracota);
+}
+
+.mensagem-sucesso {
+    margin-top: 1.5rem;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--texto-escuro);
+    color: var(--bg-terra);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    header nav a {
+        margin: 0 0.5rem;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .section-container {
+        padding: 3rem 5%;
+    }
+}
+
+         
